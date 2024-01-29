@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="detail product">
+  <title>Product</title>
+
+  <link rel="stylesheet" href="../dist/output.css" />
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/4da45c7bdd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- navbar start -->
+  <nav
+    class="fixed flex w-full left-1/2 -translate-x-1/2 top-0 justify-between items-center bg-[#00000081] transition-all duration-300 ease-out z-50 container p-3"
+    id="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <h1 class="title-nav text-light font-normal uppercase text-2xl pl-8">
+          Majestic.
+        </h1>
+      </a>
+    </div>
+    <div class="nav-menu flex items-center gap-8 ">
+      <ul class="m-0 pl-0 flex items-center lg:hidden " id="nav-menu">
+        <li class="ml-4">
+          <a class="text-light relative transition-all duration-300 ease-in-out hover:text-[#eaeaea] group"
+            href="index.html" data-page="home">
+            Home
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1px] bg-light opacity-0 group-hover:opacity-100 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+          </a>
+        </li>
+        <li class="ml-4 relative group">
+          <a class="text-light relative transition-all duration-300 ease-in-out hover:text-[#eaeaea] group"
+            href="cloth.html" data-page="cloth">
+            Cloth
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1px] bg-light opacity-0 group-hover:opacity-100 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+          </a>
+          <ul class="hidden absolute left-0 mt-0 bg-light group-hover:block lg:relative">
+            <li>
+              <a class="text-dark block p-2" href="">Shirt</a>
+            </li>
+            <li>
+              <a class="text-dark block p-2" href="">Pants</a>
+            </li>
+          </ul>
+        </li>
+        <li class="ml-4 relative group">
+          <a class="text-light relative transition-all duration-300 ease-in-out hover:text-[#eaeaea] group"
+            href="accesories.html" data-page="accesories">
+            Accesories
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1px] bg-light opacity-0 group-hover:opacity-100 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+          </a>
+          <ul class="hidden absolute left-0 mt-0 bg-light group-hover:block lg:relative">
+            <li>
+              <a class="text-dark block p-2" href="">Necklace</a>
+            </li>
+            <li>
+              <a class="text-dark block p-2" href="">Tumbler</a>
+            </li>
+          </ul>
+        </li>
+        <li class="ml-4">
+          <a class="text-light relative transition-all duration-300 ease-in-out hover:text-[#eaeaea] group"
+            href="about.html" data-page="about">
+            About Us
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1px] bg-light opacity-0 group-hover:opacity-100 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+          </a>
+        </li>
+      </ul>
+      <div class="flex items-center gap-6 pr-8">
+        <a class="text-xl text-light transition-all duration-300 ease-in-out hover:text-[#eaeaea] " aria-label="cart"
+          href="cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a class="text-xl text-light transition-all duration-300 ease-in-out hover:text-[#eaeaea]" aria-label="user"
+          href="signIn.html">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <div class="text-xl text-light transition-all duration-300 ease-in-out hover:text-[#eaeaea]" aria-label="search"
+          href="">
+          <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div id="hamburger"
+          class="text-2xl text-light transition-all duration-300 ease-in-out hover:text-[#eaeaea] hidden lg:block"
+          href="">
+          <i class="fa-solid fa-bars"></i>
+          </a>
+        </div>
+  </nav>
+
+  <!-- navbar end -->
+
+  <div id="search-popup" class="hidden fixed bg-dark top-0 left-0 w-full h-full bg-opacity-80 z-50">
+    <div class="flex justify-center items-center h-full">
+      <div class="bg-light w-1/2  ">
+        <form class="flex items-center">
+          <input id="search-input" type="text"
+            class="w-full border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none" placeholder="Search...">
+          <button class="py-2 px-4 text-light bg-dark hover:opacity-70" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- details start -->
+  <section class="mt-10 relative p-8 container">
+    <div class="flex gap-8 lg:flex-col">
+      <div class="flex-1 flex gap-3 justify-start">
+        <div class="max-h-[300px] relative w-[80%]">
+          <div class="hidden myproduct">
+            <img class="h-[300px] w-full object-cover" src="../src/assets/img/pants/pants-1.jpg" alt="Slide 1" />
+          </div>
+
+          <div class="hidden myproduct">
+            <img class="h-[300px] w-full object-cover" src="../src/assets/img/shirt/tshirt-2.jpg" alt="Slide 2" />
+          </div>
+
+          <div class="hidden myproduct">
+            <img class="h-[300px] w-full object-cover" src="../src/assets/img/shirt/tshirt-3.jpg" alt="Slide 3" />
+          </div>
+
+          <div class="hidden myproduct">
+            <img class="h-[300px] w-full object-cover" src="../src/assets/img/shirt/tshirt-4.jpg" alt="Slide 4" />
+          </div>
+
+          <button
+            class="prev absolute top-1/2 w-auto p-2 -mt-6 text-light font-bold text-2xl cursor-pointer bg-dark border-0 outline-0 hover: bg-[#0000007a] left-0"
+            onclick="plusSlides(-1)" aria-label="prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="next absolute top-1/2 w-auto p-2 -mt-6 text-light font-bold text-2xl cursor-pointer bg-dark border-0 outline-0 hover: bg-[#0000007a] right-0"
+            onclick="plusSlides(1)" aria-label="next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="relative flex-1 flex flex-col justify-stretch h-[300px]">
+          <div class="w-full h-[25%] cursor-pointer" onclick="currentSlide(1)">
+            <img class="w-full h-full object-cover" src="../src/assets/img/shirt/tshirt-1.jpg" alt="Thumbnail 1" />
+          </div>
+          <div class="w-full h-[25%] cursor-pointer" onclick="currentSlide(2)">
+            <img class="w-full h-full object-cover" src="../src/assets/img/shirt/tshirt-2.jpg" alt="Thumbnail 2" />
+          </div>
+          <div class="w-full h-[25%] cursor-pointer" onclick="currentSlide(3)">
+            <img class="w-full h-full object-cover" src="../src/assets/img/shirt/tshirt-3.jpg" alt="Thumbnail 2" />
+          </div>
+          <div class="w-full h-[25%] cursor-pointer" onclick="currentSlide(4)">
+            <img class="w-full h-full object-cover" src="../src/assets/img/shirt/tshirt-4.jpg" alt="Thumbnail 2" />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-1 justify-between flex-col">
+        <div class="title-detail">
+          <h1 class="text-2xl font-medium">
+            Lorem ipsum dolor sit amet consectetur.
+          </h1>
+          <p class="text-sm font-light">Cloth</p>
+        </div>
+        <div class="flex flex-row-reverse justify-between">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="flex justify-between gap-2 lg:flex-wrap">
+          <div class="relative mt-8">
+            <h2 class="text-lg font-semibold">Size</h2>
+            <div class="relative flex gap-2 w-full lg:flex-wrap">
+              <label class="relative inline-block cursor-pointer">
+                <input type="checkbox" class=" peer relative  transition-all opacity-0" disabled />
+                <span
+                  class="py-2 px-4 bg-[#eaeaea]  border border-[#eaeaea] text-[#737373] flex justify-center items-center peer-checked:bg-dark peer-checked:text-light cursor-not-allowed">S
+                </span>
+              </label>
+              <label class="relative inline-block cursor-pointer">
+                <input type="checkbox" class=" peer relative  transition-all opacity-0" />
+                <span
+                  class="py-2 px-4  border border-[#eaeaea] text-[#737373] flex justify-center items-center peer-checked:bg-dark peer-checked:text-light">M
+                </span>
+              </label>
+              <label class="relative inline-block cursor-pointer">
+                <input type="checkbox" class=" peer relative  transition-all opacity-0" />
+                <span
+                  class="py-2 px-4  border border-[#eaeaea] text-[#737373] flex justify-center items-center peer-checked:bg-dark peer-checked:text-light">L
+                </span>
+              </label>
+              <label class="relative inline-block cursor-pointer">
+                <input type="checkbox" class=" peer relative  transition-all opacity-0" />
+                <span
+                  class="py-2 px-4  border border-[#eaeaea] text-[#737373] flex justify-center items-center peer-checked:bg-dark peer-checked:text-light">XL
+                </span>
+              </label>
+              <label class="relative inline-block cursor-pointer">
+                <input type="checkbox" class=" peer relative  transition-all opacity-0" disabled />
+                <span
+                  class="py-2 px-4  border border-[#eaeaea] cursor-not-allowed bg-[#eaeaea] text-[#737373] flex justify-center items-center peer-checked:bg-dark peer-checked:text-light">2XL
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="relative mt-8">
+            <h2 class="text-lg font-semibold">Quantity</h2>
+            <div class="mt-6">
+              <input aria-label="quantity" type="number" id="quantity"
+                class=" border border-dark p-2 w-full focus:border-0" min="1" max="10" required>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <button class="p-3 w-full bg-dark text-light border-none text-base hover:cursor-pointer hover:opacity-70">
+            Add To Cart <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- details end -->
+
+  <!-- deskripsi start -->
+  <div class="p-8 container">
+    <div class="description-box">
+      <div class="relative mb-2 bg-dark text-light p-2 text-center">
+        <h1 class="text-2xl font-medium">Product Description</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 py-4 lg:flex-col">
+        <p class="flex-1 text-sm leading-6">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero qui
+          quisquam animi iste voluptatum at? Consequuntur cum pariatur
+          necessitatibus dignissimos, voluptate, sapiente ullam facilis vel
+          non amet harum repellendus repellat.
+        </p>
+        <p class="flex-1 text-sm leading-6">
+          Disclaimer: The color of the product in the image may not be 100%
+          the same as the physical product, due to the lighting process during
+          the image capture or the quality of the gadget screen used to view
+          the image. Before ordering, please make sure the size ordered is
+          appropriate. If after receiving the goods there are differences that
+          are considered too great and unacceptable, please request an
+          exchange of goods via Majestic Customer Service.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- deskripsi end -->
+
+  <!-- review product start -->
+  <section class="px-8 pb-8 container">
+    <div class="relative mb-2 bg-dark text-light p-2 text-center">
+      <h1 class="text-2xl font-medium">Reviews<span>(999)</span></h1>
+    </div>
+    <div class="relative my-8 flex flex-wrap gap-8">
+      <div class="relative">
+        <figure class="flex relative gap-2 items-center mb-4">
+          <img class="rounded-full object-cover w-10 h-10" src="../src/assets/img/user/user.jpg" alt="" />
+          <figcaption class="date">
+            <p class="text-[12px] font-bold">SiapaGatau123</p>
+            <p class="text-[10px] text-[#363636]">30 Nov 2023</p>
+          </figcaption>
+        </figure>
+        <div class="rating">
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+        </div>
+        <div class="message-review">
+          <p class="text-base font-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium magnam eos eius assumenda. Ab, incidunt? Lorem ipsum
+            dolor, sit amet consectetur adipisicing.
+          </p>
+        </div>
+      </div>
+      <div class="relative">
+        <figure class="flex relative gap-2 items-center mb-4">
+          <img class="rounded-full object-cover w-10 h-10" src="../src/assets/img/user/user.jpg" alt="" />
+          <figcaption class="date">
+            <p class="text-[12px] font-bold">SiapaGatau123</p>
+            <p class="text-[10px] text-[#363636]">30 Nov 2023</p>
+          </figcaption>
+        </figure>
+        <div class="rating">
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+        </div>
+        <div class="message-review">
+          <p class="text-base font-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium magnam eos eius assumenda. Ab, incidunt? Lorem ipsum
+            dolor, sit amet consectetur adipisicing.
+          </p>
+        </div>
+      </div>
+      <div class="relative">
+        <figure class="flex relative gap-2 items-center mb-4">
+          <img class="rounded-full object-cover w-10 h-10" src="../src/assets/img/user/user.jpg" alt="" />
+          <figcaption class="date">
+            <p class="text-[12px] font-bold">SiapaGatau123</p>
+            <p class="text-[10px] text-[#363636]">30 Nov 2023</p>
+          </figcaption>
+        </figure>
+        <div class="rating">
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+          <i class="fa-solid fa-star text-xl text-dark mb-2"></i>
+        </div>
+        <div class="message-review">
+          <p class="text-base font-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium magnam eos eius assumenda. Ab, incidunt? Lorem ipsum
+            dolor, sit amet consectetur adipisicing.
+          </p>
+        </div>
+      </div>
+      <div class="relative">
+        <a href="">
+          <button
+            class="px-8 py-2 bg-opacity-0 border border-dark transition-all duration-100 ease-in-out hover:cursor-pointer hover:bg-dark hover:text-light">
+            More Reviews
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- review product end -->
+
+  <!-- rlated product start -->
+  <section class="relative container w-full pb-8 px-8">
+    <div class="relative text-dark py-2 border-b border-dark">
+      <h1 class="text-2xl font-medium uppercase">Discount Product</h1>
+    </div>
+    <div class="relative flex flex-wrap justify-between w-full gap-3 gap-y-6 py-8 h-auto">
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-1</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-2</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-3</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-4</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-5</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-6</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-7</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+      <a href="product.html"
+        class="relative flex-[1_1_20%] h-auto max-w-[320px] lg:flex-[1_1_40%] hover:brightness-75 hover:cursor-pointer transition-all duration-300 ease-in-out">
+        <figure>
+          <img class="w-full max-h-[300px]" src="../src/assets/img/pants/pants-3.jpg" alt="" />
+          <figcaption>
+            <h4 class="text-lg font-semibold text-end">Product-8</h4>
+            <p class="text-sm font-light text-end">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+          </figcaption>
+        </figure>
+        <div class="discount-price">
+          <s class="text-[10px] text-accent">Rp. 200.000</s>
+          <p class="text-sm font-bold">Rp. 160.000</p>
+        </div>
+        <div class="absolute top-0 left-0 bg-dark text-light p-2 flex items-center gap-2">
+          <p class="blink text-[12px] font-medium animate-blink">Sale</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- rlated product end -->
+
+  <!-- banner start -->
+  <div class="relative container">
+    <div class="grid grid-cols-3 gap-2 sm:grid-cols-1">
+      <figure class="w-full h-[300px] bg-[#ddd]">
+        <img class="object-cover h-full w-full" src="../src/assets/img/shirt/tshirt-1.jpg" alt="" />
+      </figure>
+      <figure class="w-full h-[300px] bg-[#ddd] col-span-2 sm:col-span-1">
+        <img class="object-cover h-full w-full" src="../src/assets/img/necklace/necklace-2.jpg" alt="" />
+      </figure>
+      <figure class="w-full h-[300px] bg-[#ddd] col-span-2 sm:col-span-1">
+        <img class="object-cover h-full w-full" src="../src/assets/img/necklace/necklace-4.jpg" alt="" />
+      </figure>
+      <figure class="w-full h-[300px] bg-[#ddd]">
+        <img class="object-cover h-full w-full" src="../src/assets/img/shirt/tshirt-4.jpg" alt="" />
+      </figure>
+    </div>
+  </div>
+  <!-- banner end -->
+
+  <!-- footer start -->
+  <footer class="bg-dark container w-full">
+    <div class="flex flex-wrap justify-between p-8 gap-4 lg:flex-col">
+      <div class="relative flex-1 text-light w-full">
+        <div class="title-footer">
+          <h1 class="text-2xl font-semibold mb-4">Get Help</h1>
+          <div class="footer-desk">
+            <p class="text-[12px] font-light leading-8">
+              <a href="" class="text-light hover:underline">How To Order</a>
+            </p>
+            <p class="text-[12px] font-light leading-8">
+              <a href="" class="text-light hover:underline">Return aolicy</a>
+            </p>
+            <p class="text-[12px] font-light leading-8">
+              <a href="" class="text-light hover:underline">Product Guarantee</a>
+            </p>
+            <p class="text-[12px] font-light leading-8">
+              <a href="" class="text-light hover:underline">Payment Confirmation</a>
+            </p>
+            <p class="text-[12px] font-light leading-8">
+              <a href="" class="text-light hover:underline">Size Guide</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="relative flex-1 text-light w-full">
+        <div class="title-footer">
+          <h1 class="text-2xl font-semibold mb-4">Contact Us</h1>
+          <div class="footer-desk">
+            <p class="text-[12px] font-light leading-8">
+              WhatshApp<span class="mx-1">:</span>0811212312
+            </p>
+            <p class="text-[12px] font-light leading-8">
+              Office<span class="mx-1">:</span>Jl. Dimana Aja No.22, Pasuruan
+              JawaTimur
+            </p>
+            <p class="text-[12px] font-light leading-8">
+              Weekday<span class="mx-1">:</span>08.00 WIB - 21.00 WIB
+            </p>
+            <p class="text-[12px] font-light leading-8">
+              Weekend<span class="mx-1">:</span>09.00 WIB - 20.00 WIB
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="relative flex-1 text-light">
+        <div class="title-footer">
+          <h1 class="text-2xl font-semibold mb-4">Find Us On</h1>
+          <div class="flex flex-wrap gap-4 md:gap-2">
+            <a href="https://www.facebook.com/" aria-label="facebook"
+              class="w-10 h-10 flex items-center justify-center bg-light text-dark p-6 hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"><i
+                class="fa-brands fa-facebook-f fa-xl"></i></a>
+            <a href="https://www.twitter.com/" aria-label="twitter"
+              class="text-2xl w-10 h-10 flex items-center justify-center bg-light text-dark p-6 hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"><i
+                class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/" aria-label="intagram"
+              class="text-2xl w-10 h-10 flex items-center justify-center bg-light text-dark p-6 hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" aria-label="youtube"
+              class="text-2xl w-10 h-10 flex items-center justify-center bg-light text-dark p-6 hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"><i
+                class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.whatsapp.com/" aria-label="whatsapp"
+              class="text-2xl w-10 h-10 flex items-center justify-center bg-light text-dark p-6 hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"><i
+                class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/" aria-label="tiktok"
+              class="text-2xl w-10 h-10 flex items-center justify-center bg-light text-dark p-6 hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"><i
+                class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative text-center py-4">
+      <a href="" class="text-base text-light hover:underline">@ 2023 Majestic Indonesia</a>
+    </div>
+  </footer>
+
+  <!-- footer end -->
+
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("myproduct");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+
+
+  </script>
+
+  <script src="../dist/js/script.js"></script>
+</body>
+
+</html>
